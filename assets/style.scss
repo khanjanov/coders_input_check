@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.header {
+  width: 100%;
+
+  background-color: cyan;
+  &__container {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & h3 {
+      font-size: 36px;
+      color: darkslategrey;
+    }
+    &__list {
+      background-color: darkslategrey;
+      border: 1px solid darkslategrey;
+      border-radius: 8px;
+      padding: 16px 32px;
+      position: absolute;
+      top: 88px;
+      right: 12px;
+      transform: (100%, 25%) scale(0);
+      color: cyan;
+      display: none;
+    }
+
+    & input[type="checkbox"]:checked ~ {
+      .header__container__list {
+        display: block;
+      }
+
+      & input[type="checkbox"]:checked ~ {
+        .header__container__list {
+          display: block;
+        }
+      }
+    }
+  }
+}
